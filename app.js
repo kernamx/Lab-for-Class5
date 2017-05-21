@@ -120,8 +120,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
+  var myArray = 1;
 
+  for (var i=0; i < testArray.length; i++) {
+    myArray = multiply(testArray[i], myArray)[0];
+    var mulArrayMsg = 'The numbers ' + testArray.toString() + 'product of' + myArray + '.';
+  }
+  return [myArray, mulArrayMsg];
 }
+sumArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(2,3,4);
