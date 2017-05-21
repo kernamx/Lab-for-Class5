@@ -91,9 +91,16 @@ uncomment the call for the testSumArray() function and see if the test passes.*/
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray){ //eslint-disable-line
+function sumArray(testArray) {
+  var myArray = 0;
 
+  for (var i=0; i < testArray.length; i++) {
+    myArray = sum(testArray[i], myArray)[0];
+    var sumArrayMsg = testArray.toString() + 'pass in array of numbers, ' + myArray + 'is their sum.';
+  }
+  return [myArray, sumArrayMsg];
 }
+sumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
